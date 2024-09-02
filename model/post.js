@@ -1,0 +1,20 @@
+const mongoose = require("mongoose");
+
+mongoose.Schema({
+  username: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "user",
+  },
+  content: {
+    type: String,
+  },
+  date: {
+    type: Date,
+    default: Date.now,
+  },
+  likes: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+    },
+  ],
+});
