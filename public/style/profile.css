@@ -1,0 +1,160 @@
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.mainContainer {
+  display: flex;
+}
+
+.main {
+  width: 100%;
+  height: 100vh;
+
+  background: linear-gradient(
+    to right top,
+    #1db9ff,
+    #a2a0ff,
+    #fb7ad4,
+    #ff677a,
+    #f48603
+  );
+}
+.leftContainer {
+  width: 35%;
+  height: 100vh;
+  border-radius: 3rem;
+  border: 5px solid black;
+  box-shadow: 75px 13px 92px 64px rgba(0, 0, 0, 0.1);
+  margin-left: 2px;
+}
+
+.name {
+  font-size: 40px;
+  font-weight: bold;
+  padding: 8%;
+}
+textarea {
+  width: 90%;
+  height: 35vh;
+  border: 2px solid black;
+  background: transparent;
+  color: aliceblue;
+  resize: none;
+  padding: 12px;
+}
+.postButton {
+  width: 30%;
+  height: 4vh;
+  border-radius: 3px;
+  background: blue;
+  color: aliceblue;
+}
+
+.postcantainer {
+  width: 20%;
+  height: 20vh;
+  background: black;
+  border: 5px solid beige;
+} */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.letfdiv {
+  width: 30%;
+  height: 100vh;
+  border: 4px solid transparent;
+  padding: 9px;
+  border-radius: 30px;
+  box-shadow: 37px 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+.rightdiv {
+  width: 70%;
+  height: 100vh;
+  border: 4px solid transparent;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+.maindiv {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(
+    to right top,
+    #1db9ff,
+    #a2a0ff,
+    #fb7ad4,
+    #ff677a,
+    #f48603
+  );
+}
+
+h1 {
+  color: aliceblue;
+  padding: 10px;
+}
+
+textarea {
+  width: 90%;
+  height: 35vh;
+  border: 2px solid black;
+  background: white;
+  color: aliceblue;
+  resize: none;
+  padding: 12px;
+}
+.postButton {
+  width: 30%;
+  height: 4vh;
+  border-radius: 3px;
+  background: blue;
+  color: aliceblue;
+}
+
+.textContainer {
+  padding: 8px;
+}
+.buttonPosition {
+  margin-top: 0px;
+  margin-left: 8px;
+}
+
+.post {
+  width: 32%;
+  height: 30vh;
+  background: transparent;
+  border: 5px solid beige;
+
+  background: linear-gradient(
+    to right top,
+    #1db9ff,
+    #a2a0ff,
+    #fb7ad4,
+    #ff677a,
+    #f48603
+  );
+  box-shadow: 37px 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+.postcantainer h2 {
+  padding: 5px;
+  font-family: bold;
+  background: red;
+}
+.content {
+  padding: 5px;
+  width: 100%;
+  flex-wrap: wrap;
+  overflow: hidden;
+  background: black;
+}
+.like {
+  display: flex;
+  justify-content: space-between;
+  background: green;
+  margin-top: 15px;
+}

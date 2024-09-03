@@ -3,6 +3,9 @@ const app = express();
 const path = require("path");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
+const cookieParser = require("cookie-parser");
+
+app.use(cookieParser());
 
 const UserModel = require(`./model/user`);
 
@@ -56,18 +59,21 @@ app.post("/login", async (req, res) => {
   });
 });
 
-// function isLogenIn(req, res, next) {
-//   if (req.cookies.token === " ") return res.redirect("/login");
-//   else {
-//     let decoded = jwt.verify(req.cookies.token, "memon");
-//     req.user = decoded;
-//   }
-//   next();
-// }
-
-app.get("/profile", async (req, res) => {
-  await res.send("hello");
+app.get("/profile", IslogedIn, async (req, res) => {
+  let user = await UserModel.findOne({ email: req.user.email });
+  console.log(user);
+  res.render("profile.ejs", { user });
 });
+
+function IslogedIn(req, res, next) {
+  if (req.cookies.token === "") res.send("you need to be login");
+  else {
+    let data = jwt.verify(req.cookies.token, "memon");
+    req.user = data;
+  }
+
+  next();
+}
 
 app.listen(3000, function (err) {
   console.log("server is running on port 3000");
