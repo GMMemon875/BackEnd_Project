@@ -150,7 +150,9 @@ textarea {
   width: 100%;
   flex-wrap: wrap;
   overflow: hidden;
+
   background: black;
+  color: white;
 }
 .like {
   display: flex;
