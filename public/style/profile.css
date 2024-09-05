@@ -63,6 +63,16 @@ textarea {
   padding: 0;
   box-sizing: border-box;
 }
+body {
+  background: linear-gradient(
+    to right top,
+    #1db9ff,
+    #a2a0ff,
+    #fb7ad4,
+    #ff677a,
+    #f48603
+  );
+}
 
 .letfdiv {
   width: 30%;
@@ -104,7 +114,7 @@ textarea {
   height: 35vh;
   border: 2px solid black;
   background: white;
-  color: aliceblue;
+  color: black;
   resize: none;
   padding: 12px;
 }
@@ -113,6 +123,17 @@ textarea {
   height: 4vh;
   border-radius: 3px;
   background: blue;
+  color: aliceblue;
+}
+.logoutButton {
+  width: 30%;
+  height: 4vh;
+  border-radius: 3px;
+  background: red;
+  margin-left: 27%;
+}
+.logoutButton a {
+  text-decoration: none;
   color: aliceblue;
 }
 
@@ -140,23 +161,32 @@ textarea {
   );
   box-shadow: 37px 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
-.postcantainer h2 {
-  padding: 5px;
-  font-family: bold;
-  background: red;
-}
-.content {
-  padding: 5px;
-  width: 100%;
-  flex-wrap: wrap;
-  overflow: hidden;
-
-  background: black;
-  color: white;
-}
 .like {
   display: flex;
   justify-content: space-between;
-  background: green;
-  margin-top: 15px;
+  position: sticky;
+  margin-top: 5px;
+}
+.like a {
+  text-decoration: none;
+  color: white;
+}
+.title {
+  position: static;
+  top: 3px;
+  padding: 4px;
+  font-size: 25px;
+  color: aliceblue;
+}
+.styled-text {
+  width: 300px;
+  height: 40vh;
+  border: 2px solid black;
+  padding: 10px;
+  overflow: hidden; /* Hides any overflowing text */
+}
+.content {
+  padding: 5px;
+  height: 27vh;
+  overflow-y: scroll;
 }

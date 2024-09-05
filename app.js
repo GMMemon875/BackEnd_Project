@@ -8,6 +8,7 @@ const cookieParser = require("cookie-parser");
 app.use(cookieParser());
 
 const UserModel = require(`./model/user`);
+const PostModel = require(`./model/post`);
 
 app.set("views engine ", "ejs");
 app.use(express.json());
@@ -60,9 +61,22 @@ app.post("/login", async (req, res) => {
 });
 
 app.get("/profile", IslogedIn, async (req, res) => {
-  let user = await UserModel.findOne({ email: req.user.email });
-  console.log(user);
+  let user = await UserModel.findOne({ email: req.user.email }).populate(
+    "posts"
+  );
+  // console.log(user);
   res.render("profile.ejs", { user });
+});
+app.post("/post", IslogedIn, async (req, res) => {
+  let user = await UserModel.findOne({ email: req.user.email });
+  let { content } = req.body;
+  let post = await PostModel.create({
+    username: user._id,
+    content,
+  });
+  user.posts.push(post._id);
+  await user.save();
+  res.redirect("/profile");
 });
 
 function IslogedIn(req, res, next) {

@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-mongoose.Schema({
+let postSchema = mongoose.Schema({
   username: {
     type: mongoose.Schema.Types.ObjectId,
     ref: "user",
@@ -18,3 +18,5 @@ mongoose.Schema({
     },
   ],
 });
+
+module.exports = mongoose.model("post", postSchema);

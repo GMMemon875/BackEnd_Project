@@ -47,6 +47,7 @@
           <div class="name">
             <h1>hello,<span><%=user.fullName%></span></h1>
           </div>
+          
           <div class="textContainer">
             <textarea
               name="content"
@@ -55,65 +56,31 @@
           </div>
           <div class="buttonPosition">
             <button class="postButton">Post</button>
+            <button class="logoutButton"><a href="/logout">LogOut</a></button>
           </div>
         </form>
       </div>
       <div class="rightdiv">
-        <div class="post">
-          <div class="">
-            <div class="postcantainer">
-              <h2>Mustafa Memon</h2>
-            </div>
+       
+        <% user.posts.forEach(function(post){ %>
+           
+          <div class="styled-text">
+            <div class="title"><%= user.fullName%></div>
             <div class="content">
-              hudusnudsjsunm. hi man;;jkdbKBFJKBefk fjkbsfkj
-              s;kjfn;ksjdfnjesfnkjdsvk;jbsdvjsdnkjd
-              fkjfbdsjfkfsjk;dfkjsdjjhgdhjd hi man;;jkdbKBFJKBefk fjkbsfkj
+              <%= post.content %>
+               </div>
+               <div class="like">
+                <a href="">like</a>
+                <a href="">comment</a>
+                <a href="">edit</a>
+              </div>
             </div>
-            <div class="like">
-              <a href="">like</a>
-              <a href="">comment</a>
-              <a href="">edit</a>
-            </div>
-            <div class="content">
-              hudusnudsjsunm. hi man;;jkdbKBFJKBefk fjkbsfkj
-              s;kjfn;ksjdfnjesfnkjdsvk;jbsdvjsdnkjd
-              fkjfbdsjfkfsjk;dfkjsdjjhgdhjd hi man;;jkdbKBFJKBefk fjkbsfkj
-            </div>
-            <div class="like">
-              <a href="">like</a>
-              <a href="">comment</a>
-              <a href="">edit</a>
-            </div>
-            <div class="content">
-              hudusnudsjsunm. hi man;;jkdbKBFJKBefk fjkbsfkj
-              s;kjfn;ksjdfnjesfnkjdsvk;jbsdvjsdnkjd
-              fkjfbdsjfkfsjk;dfkjsdjjhgdhjd hi man;;jkdbKBFJKBefk fjkbsfkj
-            </div>
-            <div class="like">
-              <a href="">like</a>
-              <a href="">comment</a>
-              <a href="">edit</a>
-            </div>
-            <div class="content">
-              hudusnudsjsunm. hi man;;jkdbKBFJKBefk fjkbsfkj
-              s;kjfn;ksjdfnjesfnkjdsvk;jbsdvjsdnkjd
-              fkjfbdsjfkfsjk;dfkjsdjjhgdhjd hi man;;jkdbKBFJKBefk fjkbsfkj
-            </div>
-            <div class="like">
-              <a href="">like</a>
-              <a href="">comment</a>
-              <a href="">edit</a>
-            </div>
-            <div class="content">
-              hudusnudsjsunm. hi man;;jkdbKBFJKBefk fjkbsfkj
-              s;kjfn;ksjdfnjesfnkjdsvk;jbsdvjsdnkjd
-              fkjfbdsjfkfsjk;dfkjsdjjhgdhjd hi man;;jkdbKBFJKBefk fjkbsfkj
-            </div>
-            <div class="like">
-              <a href="">like</a>
-              <a href="">comment</a>
-              <a href="">edit</a>
-            </div>
+       <% }) %>
+         
+         
+        
+            
+          </div>   
           </div>
         </div>
       </div>
