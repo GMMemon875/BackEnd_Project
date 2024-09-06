@@ -1,36 +1,4 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../style/profile.css" />
-    <title>Document</title>
-  </head>
-  <body>
-    <div class="mainContainer"> 
-    <div class="main">
-      <div class="leftContainer">
-        <form action="/post" method="post">
-          <div class="name">
-            <p>hello,<span><%=user.fullName%></span></p>
-            <textarea
-              name="content"
-              placeholder="write a Post Content"
-            ></textarea>
-            <div class="buttonPosition">
-              <button class="postButton">Post</button>
-            </div>
-          </div>
-        </form>
-      </div>
-    </div>
-      <div class="post">
-          <div class="postcantainer"></div>
-        </div>
-      </div>
-    </div>
-  </body>
-</html> -->
+ 
 
 <!DOCTYPE html>
 <html lang="en">
@@ -61,7 +29,7 @@
         </form>
       </div>
       <div class="rightdiv">
-       
+       <%if(user.length ===) %>
         <% user.posts.forEach(function(post){ %>
            
           <div class="styled-text">
