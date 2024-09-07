@@ -9,6 +9,7 @@ app.use(cookieParser());
 
 const UserModel = require(`./model/user`);
 const PostModel = require(`./model/post`);
+const post = require("./model/post");
 
 app.set("views engine ", "ejs");
 app.use(express.json());
@@ -76,6 +77,19 @@ app.post("/post", IslogedIn, async (req, res) => {
   });
   user.posts.push(post._id);
   await user.save();
+  res.redirect("/profile");
+});
+
+app.get("/like/:id", IslogedIn, async (req, res) => {
+  let postid = await PostModel.findOne({ _id: req.params.id }).populate(
+    "username"
+  );
+  if (postid.likes.indexOf(req.user.userid) === -1) {
+    postid.likes.push(req.user.userid);
+  } else {
+    postid.likes.splice(postid.likes.indexOf(req.user.userid), 1);
+  }
+  await postid.save();
   res.redirect("/profile");
 });
 

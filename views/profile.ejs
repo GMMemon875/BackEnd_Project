@@ -29,22 +29,25 @@
         </form>
       </div>
       <div class="rightdiv">
-       <%if(user.length ===) %>
-        <% user.posts.forEach(function(post){ %>
-           
+       <%if (user.posts.length > 0) { %>
+        <% user.posts.forEach(function(post){ %> 
           <div class="styled-text">
             <div class="title"><%= user.fullName%></div>
             <div class="content">
-              <%= post.content %>
+              <%=post.content %>
                </div>
                <div class="like">
-                <a href="">like</a>
+                <a href="/like/<%=post._id%>"><sup class="superscript"><%= post.likes.length %></sup><%= post.likes.indexOf(user._id) === -1 ? "like" : "Unlike"%> </a>  
                 <a href="">comment</a>
                 <a href="">edit</a>
               </div>
             </div>
        <% }) %>
          
+      <%} else {%>
+        <div class="NoPost">No posts</div>
+
+      <%}%> 
          
         
             
