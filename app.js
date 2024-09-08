@@ -93,6 +93,26 @@ app.get("/like/:id", IslogedIn, async (req, res) => {
   res.redirect("/profile");
 });
 
+app.get("/edit/:id", IslogedIn, async (req, res) => {
+  let post = await PostModel.findOne({ _id: req.params.id }).populate(
+    "username"
+  );
+  res.render("edit.ejs", { post });
+});
+
+app.post("/update/:id", IslogedIn, async (req, res) => {
+  let post = await PostModel.findOneAndUpdate(
+    { _id: req.params.id },
+    { content: req.body.content }
+  );
+  res.redirect("/profile");
+});
+
+app.get("/delete/:id", IslogedIn, async (req, res) => {
+  let post = await PostModel.findOneAndDelete({ _id: req.params.id });
+  res.redirect("/profile");
+});
+
 function IslogedIn(req, res, next) {
   if (req.cookies.token === "") res.send("you need to be login");
   else {

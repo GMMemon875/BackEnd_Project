@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style/edit.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="maindiv">
+      <div class="letfdiv">
+        <form action="/update/<%=post._id%>" method="post">
+          <div class="name">
+            <h1>hello,<span>Edit Your Post</span></h1>
+          </div>
+
+          <div class="textContainer">
+            <textarea name="content" placeholder="write a New Post">
+              <%= post.content %></textarea
+            >
+          </div>
+          <div class="buttonPosition">
+            <button class="postButton">Post Update</button>
+            <button class="profileButton">
+              <a href="/profile">Back To Profile</a>
+            </button>
+          </div>
+        </form>
+
+        <button class="deleteButton">
+          <a href="/delete/<%=post._id%>">Delete</a>
+        </button>
+      </div>
+    </div>
+  </body>
+</html>

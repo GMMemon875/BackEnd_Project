@@ -22,27 +22,6 @@ body {
   border-radius: 30px;
   box-shadow: 37px 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
-.rightdiv {
-  width: 70%;
-  height: 100vh;
-  border: 4px solid transparent;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-}
-.maindiv {
-  display: flex;
-  width: 100%;
-  height: 100vh;
-  background: linear-gradient(
-    to right top,
-    #1db9ff,
-    #a2a0ff,
-    #fb7ad4,
-    #ff677a,
-    #f48603
-  );
-}
 
 h1 {
   color: aliceblue;
@@ -54,7 +33,7 @@ textarea {
   height: 35vh;
   border: 2px solid black;
   background: white;
-  color: black;
+  color: rgb(172, 166, 166);
   resize: none;
   padding: 12px;
   box-shadow: 37px 10px 15px -3px rgba(0, 0, 0, 0.1);
@@ -63,61 +42,37 @@ textarea {
   width: 30%;
   height: 4vh;
   border-radius: 3px;
-  background: blue;
+  background: #58c5f8;
   color: aliceblue;
 }
-.logoutButton {
+.rightdiv {
+  width: 70%;
+  height: 100vh;
+  border: 4px solid transparent;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+span {
+  color: black;
+}
+.profileButton {
   width: 30%;
   height: 4vh;
   border-radius: 3px;
-  background: red;
+  background: greenyellow;
   margin-left: 27%;
 }
-.logoutButton a {
+.profileButton a {
   text-decoration: none;
-  color: aliceblue;
+  color: red;
 }
 
-.textContainer {
-  padding: 8px;
-}
 .buttonPosition {
   margin-top: 0px;
   margin-left: 8px;
 }
-
-.post {
-  width: 32%;
-  height: 30vh;
-  background: transparent;
-  border: 5px solid beige;
-
-  background: linear-gradient(
-    to right top,
-    #1db9ff,
-    #a2a0ff,
-    #fb7ad4,
-    #ff677a,
-    #f48603
-  );
-  box-shadow: 37px 10px 15px -3px rgba(0, 0, 0, 0.1);
-}
-.like {
-  display: flex;
-  justify-content: space-between;
-  position: sticky;
-  margin-top: 5px;
-}
-.like a {
-  text-decoration: none;
-  color: white;
-}
-.superscript {
-  font-size: 12px;
-  color: black;
-}
 .title {
-  position: static;
   top: 3px;
   padding: 4px;
   font-size: 25px;
@@ -135,16 +90,16 @@ textarea {
   height: 27vh;
   overflow-y: scroll;
 }
-.NoPost {
-  font-size: 40px;
 
-  color: rgb(214, 210, 210);
-  position: absolute;
-  top: 50%;
-  left: 60%;
+.deleteButton {
+  width: 30%;
+  height: 4vh;
+  border-radius: 3px;
+  background: red;
+  margin-top: 65%;
+  margin-left: 58%;
 }
-
-
-
-
-
+.deleteButton a {
+  text-decoration: none;
+  color: white;
+}

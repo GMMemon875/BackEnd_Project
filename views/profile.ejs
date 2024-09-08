@@ -39,7 +39,7 @@
                <div class="like">
                 <a href="/like/<%=post._id%>"><sup class="superscript"><%= post.likes.length %></sup><%= post.likes.indexOf(user._id) === -1 ? "like" : "Unlike"%> </a>  
                 <a href="">comment</a>
-                <a href="">edit</a>
+                <a href="/edit/<%=post._id%>">edit</a>
               </div>
             </div>
        <% }) %>
