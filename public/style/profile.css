@@ -48,6 +48,21 @@ h1 {
   color: aliceblue;
   padding: 10px;
 }
+.image {
+  width: 13%;
+  height: 10vh;
+  background: red;
+  border-radius: 5px;
+}
+.name {
+  display: flex;
+}
+.image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
 
 textarea {
   width: 90%;
@@ -143,8 +158,3 @@ textarea {
   top: 50%;
   left: 60%;
 }
-
-
-
-
-

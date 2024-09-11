@@ -7,6 +7,7 @@ const cookieParser = require("cookie-parser");
 
 app.use(cookieParser());
 
+const Profilepic = require("./confiq/multer");
 const UserModel = require(`./model/user`);
 const PostModel = require(`./model/post`);
 const post = require("./model/post");
@@ -20,6 +21,10 @@ app.get("/", (req, res) => {
   res.render("Register.ejs");
 });
 
+app.get("/profile/upload", (req, res) => {
+  res.render("upload.ejs");
+});
+ 
 app.post("/register", async (req, res) => {
   const { fullName, age, username, email, password } = req.body;
   const findemail = await UserModel.findOne({ email });

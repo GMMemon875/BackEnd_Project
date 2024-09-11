@@ -13,6 +13,11 @@
       <div class="letfdiv">
         <form action="/post" method="post">
           <div class="name">
+            <div class="image"> 
+              <a href="/upload">
+                <img src="/images/upload/<%= user.profileimage %>" >
+              </a>
+            </div>
             <h1>hello,<span><%=user.fullName%></span></h1>
           </div>
           

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width= , initial-scale=1.0" />
+    <title>Profile Picture</title>
+    <link href="../Style/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="Box">
+        <div class="image"> 
+            <a href="/upload">
+              <img src="/images/upload/default.png" >
+            </a>
+          </div>
+        
+        <h1>Profile Picture</h1>
+        <form autocomplete="off" action="/upload" method="post" enctype="multipart/form-data">
+          <input type="file" name="image"    />
+           <input type="submit" value="upload file">
+      </div>
+    </div>
+  </body>
+</html>
