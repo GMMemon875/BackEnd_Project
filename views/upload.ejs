@@ -4,21 +4,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width= , initial-scale=1.0" />
     <title>Profile Picture</title>
-    <link href="../Style/style.css" rel="stylesheet" />
+    <link href="../style/profileimage.css" rel="stylesheet" />
   </head>
   <body>
     <div class="container">
       <div class="Box">
         <div class="image"> 
-            <a href="/upload">
+            <a href="/profile/upload">
               <img src="/images/upload/default.png" >
             </a>
           </div>
         
         <h1>Profile Picture</h1>
         <form autocomplete="off" action="/upload" method="post" enctype="multipart/form-data">
-          <input type="file" name="image"    />
-           <input type="submit" value="upload file">
+          <input type="file" name="image"/>
+           <button type="submit" value="upload file"> Upload  </button>
       </div>
     </div>
   </body>

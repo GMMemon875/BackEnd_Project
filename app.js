@@ -24,7 +24,14 @@ app.get("/", (req, res) => {
 app.get("/profile/upload", (req, res) => {
   res.render("upload.ejs");
 });
- 
+
+app.post("/upload", IslogedIn, Profilepic.single("image"), async (req, res) => {
+  const user = await UserModel.findOne({ email: req.user.email });
+  user.profileimage = req.file.filename;
+  await user.save();
+  res.redirect("/profile");
+});
+
 app.post("/register", async (req, res) => {
   const { fullName, age, username, email, password } = req.body;
   const findemail = await UserModel.findOne({ email });
